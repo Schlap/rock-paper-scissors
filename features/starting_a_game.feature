@@ -7,3 +7,9 @@ Scenario: Game registration
 	Given I am on the homepage
 	When I follow "Register"
 	Then I should see "What's your name?"
+
+Scenario: Ready to play
+	Given I am on the registration page
+	When I enter my name
+	And I return to the homepage
+	Then I should view "Ready to play"

@@ -9,7 +9,14 @@ class ROCKPAPERSCISSORS < Sinatra::Base
   end
 
   get '/registration' do
+  	@name = session[:me]
   	erb :register
+  end
+
+  post '/' do
+  	session[:me] = params[:player_name]
+  	@name = session[:me]
+  	erb :index
   end
 
   # start the server if ruby file executed directly

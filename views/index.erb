@@ -1,10 +1,11 @@
 <h1> Welcome to Rock, Paper, Scissors!</h1>
 
 <% if @name %>
-<h3>Greetings <%= @name %></h3>
+<h1>Greetings <%= @name %></h1>
+<p><a href='/new_game'>Ready to play?</p>
 <% else %>
 
-<h2>Start a new game?</h2>
+<h3>Start a new game?</h3>
 
     <p><a href='/registration'>Register</a></p>
 <% end %>
