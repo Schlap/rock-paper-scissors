@@ -2,6 +2,7 @@ require 'sinatra/base'
 require_relative 'player'
 
 class ROCKPAPERSCISSORS < Sinatra::Base
+	Game = Game.new
 	set :views, Proc.new { File.join(root, "..", "views") }
 	enable :sessions
 
