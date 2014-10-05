@@ -29,9 +29,6 @@ class ROCKPAPERSCISSORS < Sinatra::Base
   end
 
   get '/choosing_a_sign' do
-  	session[:me] = params[:player_name]
-  	player = Player.new(name: @name)
-  	@name = session[:me]
   	erb :choosing_a_sign
   end
 
