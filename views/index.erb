@@ -1,11 +1,12 @@
-<h1> Welcome to Rock, Paper, Scissors!</h1>
-
+<h1 align='center'> Welcome to Rock, Paper, Scissors!</h1>
+<body bgcolor="#E6E6FA">
 <% if @name %>
-<h1>Greetings <%= @name %></h1>
-<p><a href='/new_game'>Ready to play?</p>
+<h2 align='center'>Hello <%= @name %></h2>
+<h3 align='center'><a href='/ready_to_play'>Ready to play?</h3>
 <% else %>
 
-<h3>Start a new game?</h3>
+<h3 align='center'>Register to play</h3>
 
-    <p><a href='/registration'>Register</a></p>
+    <p align='center'><a href='/registration'>Register</a></p>
+ </body>
 <% end %>

@@ -12,4 +12,9 @@ Scenario: Ready to play
 	Given I am on the registration page
 	When I enter my name
 	And I return to the homepage
-	Then I should view "Ready to play"
+	Then I should view "Ready to play?"
+
+Scenario: Playing a game
+	Given I am on the ready to play page
+	When I click in "Ready to play?"
+	Then I should observe "Choose your sign!"

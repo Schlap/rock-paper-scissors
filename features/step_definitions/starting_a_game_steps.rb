@@ -20,9 +20,21 @@ When(/^I enter my name$/) do
 end
 
 When(/^I return to the homepage$/) do
-  expect(current_path).to eq('/')
+  expect(current_path).to eq('/ready_to_play')
 end
 
 Then(/^I should view "(.*?)"$/) do |message|
   expect(page).to have_content "Ready to play?"
+end
+
+Given(/^I am on the ready to play page$/) do
+  visit '/ready_to_play'
+end
+
+When(/^I click in "(.*?)"$/) do |link|
+  click_link link
+ end
+
+Then(/^I should observe "(.*?)"$/) do |message|
+  expect(page).to have_content "Choose your sign!"
 end

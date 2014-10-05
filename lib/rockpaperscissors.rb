@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative 'player'
 
 class ROCKPAPERSCISSORS < Sinatra::Base
 	set :views, Proc.new { File.join(root, "..", "views") }
@@ -13,10 +14,25 @@ class ROCKPAPERSCISSORS < Sinatra::Base
   	erb :register
   end
 
-  post '/' do
+  post '/ready_to_play' do
   	session[:me] = params[:player_name]
+  	player = Player.new(name: @name)
   	@name = session[:me]
-  	erb :index
+  	erb :ready_to_play
+  end
+
+  get '/ready_to_play' do
+  	session[:me] = params[:player_name]
+  	player = Player.new(name: @name)
+  	@name = session[:me]
+  	erb :ready_to_play
+  end
+
+  get '/choosing_a_sign' do
+  	session[:me] = params[:player_name]
+  	player = Player.new(name: @name)
+  	@name = session[:me]
+  	erb :choosing_a_sign
   end
 
   # start the server if ruby file executed directly
