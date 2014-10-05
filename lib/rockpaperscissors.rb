@@ -25,8 +25,9 @@ class ROCKPAPERSCISSORS < Sinatra::Base
 
   get '/ready_to_play' do
   	session[:me] = params[:player_name]
-  	player = Player.new(name: @name)
   	@name = session[:me]
+  	player = Player.new(name: @name)
+  	Game.add(player)
   	erb :ready_to_play
   end
 
