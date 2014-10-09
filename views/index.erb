@@ -1,12 +1,22 @@
-<h1 align='center'> Welcome to Rock, Paper, Scissors!</h1>
 <body bgcolor="#E6E6FA">
+
 <% if @name %>
+
 <h2 align='center'>Hello <%= @name %></h2>
-<h3 align='center'><a href='/ready_to_play'>Ready to play?</h3>
+
+<h2 align='center'>Choose your sign!</h2>
+
+<form action='/result' method='post'>
+<input type='submit' name='rock' value='rock'>
+</form>
+
 <% else %>
 
-<h3 align='center'>Register to play</h3>
+<h1 align='center'> Welcome to Rock, Paper, Scissors!</h1>
 
-    <p align='center'><a href='/registration'>Register</a></p>
- </body>
+<h2 align='center'><form action='/register' method='post'>
+	Name: <input type='text' name='player_name'>
+	<input type='submit' value='Register'</h2>
+</form></p>
+
 <% end %>
