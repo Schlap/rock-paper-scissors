@@ -11,4 +11,4 @@ Scenario: Game registration
 Scenario: Playing the game
 	Given I am on the gamepage
 	When I click on "rock"
-	Then it should say "You chose rock!"
+	Then it should say "You chose"

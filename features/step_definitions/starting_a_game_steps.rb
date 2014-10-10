@@ -22,5 +22,5 @@ When(/^I click on "(.*?)"$/) do |button|
 end
 
 Then(/^it should say "(.*?)"$/) do |message|
-  expect(page).to have_content "You chose rock!"
+  expect(page).to have_content "You chose"
 end

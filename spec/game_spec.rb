@@ -14,37 +14,37 @@ let(:player){double :player}
     it 'should choose rock and beat scissors' do
         game.weapon = "rock"
         allow(player).to receive(:picks){"scissors"}
-        expect(game.winner).to eq "Game wins"
+        expect(game.winner).to eq "Game"
     end
 
     it 'should choose rock and lose to paper' do
         game.weapon = "rock"
         allow(player).to receive(:picks){"paper"}
-        expect(game.winner).to eq "Player wins"
+        expect(game.winner).to eq "Player"
     end
 
     it "should choose paper and beat rock" do
         game.weapon = "paper"
         allow(player).to receive (:picks){"rock"}
-        expect(game.winner).to eq "Game wins"
+        expect(game.winner).to eq "Game"
     end
 
     it "should choose paper and lose to scissors" do
         game.weapon = "paper"
         allow(player).to receive (:picks){"scissors"}
-        expect(game.winner).to eq "Player wins"
+        expect(game.winner).to eq "Player"
     end
 
     it "should choose scissors and beat paper" do
         game.weapon = "scissors"
         allow(player).to receive (:picks){"paper"}
-        expect(game.winner).to eq "Game wins"
+        expect(game.winner).to eq "Game"
       end
 
     it "should choose scissors and lose to rock" do
         game.weapon = "scissors"
         allow(player).to receive (:picks){"rock"}
-        expect(game.winner).to eq "Player wins"
+        expect(game.winner).to eq "Player"
     end
 
     it "should draw when player picks same sign" do

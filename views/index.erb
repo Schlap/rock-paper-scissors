@@ -2,12 +2,20 @@
 
 <% if @name %>
 
-<h2 align='center'>Hello <%= @name %></h2>
+<h1 align='center'>Hello <%= @name %></h1>
 
 <h2 align='center'>Choose your sign!</h2>
 
 <form action='/result' method='post'>
 <input type='submit' name='rock' value='rock'>
+</form>
+
+<form action='/result' method='post'>
+<input type='submit' name='paper' value='paper'>
+</form>
+
+<form action='/result' method='post'>
+<input type='submit' name='scissors' value='scissors'>
 </form>
 
 <% else %>

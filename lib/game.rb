@@ -2,7 +2,7 @@ require_relative 'player'
 
 class Game
 
-      attr_accessor :weapon
+      attr_accessor :weapon, :winner
 
     def initialize(player)
         @player = player
@@ -14,23 +14,23 @@ class Game
     end
 
     def winner
-        if self.weapon == "rock" && @player.picks == "scissors"
-          "Game wins"
-        elsif self.weapon == "rock" && @player.picks == "paper"
-          "Player wins"
-        elsif self.weapon == "paper" && @player.picks == "rock"
-          "Game wins"
-        elsif self.weapon == "paper" && @player.picks == "scissors"
-          "Player wins"
-        elsif self.weapon == "scissors" && @player.picks == "paper"
-          "Game wins"
-        else self.weapon == "scissors" && @player.picks == "rock"
-          "Player wins"
+        if self.weapon == "rock" && @player.picks(weapon) == "scissors"
+          "Game"
+        elsif self.weapon == "rock" && @player.picks(weapon) == "paper"
+          "Player"
+        elsif self.weapon == "paper" && @player.picks(weapon) == "rock"
+          "Game"
+        elsif self.weapon == "paper" && @player.picks(weapon) == "scissors"
+          "Player"
+        elsif self.weapon == "scissors" && @player.picks(weapon) == "paper"
+          "Game"
+        else self.weapon == "scissors" && @player.picks(weapon) == "rock"
+          "Player"
      end
   end
 
         def same_pick
-          if self.weapon = @player.picks
+          if self.weapon == @player.picks(weapon)
             "It's a draw!"
         end
     end

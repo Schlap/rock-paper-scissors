@@ -1,2 +1,46 @@
+<body bgcolor="#E6E6FA">
+
 <h1>Results</h1>
-<p>You chose rock!</p>
+
+
+<% if @player_weapon1 && @game_weapon == "scissors" %>
+
+<p>You chose</p><%=@player_weapon1 %><p>Game chose scissors, You win!</p>
+
+<% elsif @player_weapon1 && @game_weapon == "paper" %>
+
+<p>You chose</p><%=@player_weapon1 %><p>Game chose paper, you lose :( </p>
+
+<% elsif @player_weapon1 && @game_weapon == "rock" %>
+
+<p>You chose </p><%=@player_weapon1 %><p>Game chose rock, it's a draw</p>
+
+<% elsif @player_weapon2 && @game_weapon == "rock" %>
+
+<p>You chose </p><%=@player_weapon2 %><p>Game chose rock, you win!</p>
+
+<% elsif @player_weapon2 && @game_weapon == "scissors" %>
+
+<p>You chose </p><%=@player_weapon2 %><p>Game chose scissors, you lose :( </p>
+
+<% elsif @player_weapon2 && @game_weapon == "paper" %>
+
+<p>You chose </p><%=@player_weapon2 %><p>Game chose paper, it's a draw </p>
+
+<% elsif @player_weapon3 && @game_weapon == "rock" %>
+
+<p>You chose </p><%=@player_weapon3 %><p>Game chose rock, you lose :( </p>
+
+<% elsif @player_weapon3 && @game_weapon == "paper" %>
+
+<p>You chose </p><%=@player_weapon3 %><p>Game chose paper, you win! :( </p>
+
+<% else @player_weapon3 && @game_weapon == "scissors" %>
+
+<p>You chose </p><%=@player_weapon3 %><p>Game chose scissors, it's a draw </p>
+
+<% end %>
+
+<a href="/">Play again?</a>
+
+</body>
